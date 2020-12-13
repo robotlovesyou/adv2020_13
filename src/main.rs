@@ -97,7 +97,7 @@ mod tests {
 
     const TEST_TWO_NUMS: &str = "123\n7,13";
     const TEST_THREE_NUMS: &str = "123\n7,13,17";
-    const TEST_FOUR_NUMS: &str = "123\n7,13,17,x,19";
+    const TEST_FOUR_NUMS: &str = "123\n7,13,17,19";
 
     #[test]
     fn it_returns_the_correct_start_offset_for_two_num_test() {
@@ -117,7 +117,7 @@ mod tests {
     fn it_returns_the_correct_start_offset_for_four_num_test() {
         let (_, busses) = read_input(TEST_FOUR_NUMS.lines());
         let offset = part_two(&busses);
-        assert_eq!(BigInt::from(10997), offset);
+        assert_eq!(BigInt::from(168), offset);
     }
 
     #[test]
